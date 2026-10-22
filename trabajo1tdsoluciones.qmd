@@ -1,0 +1,51 @@
+---
+title: "trabajo1tdrespuestas"
+format: html
+editor: visual
+---
+
+```{r}
+#| echo: false
+tabla1 <- matrix(c(15,  3, 21, -2, 8, 19, 13, 14, -4, 26,  5, 13, 20,  7, 2,  9), nrow = 4, byrow = TRUE)
+
+rownames(tabla1) <- c("$d_1$", "$d_2$", "$d_3$", "$d_4$")
+colnames(tabla1) <- c("$e_1$", "$e_2$", "$e_3$", "$e_4$")
+
+knitr::kable(tabla1)
+```
+
+```{r}
+source("https://raw.githubusercontent.com/mautils/teoriadecision/master/teoriadecision_funciones_incertidumbre.R")
+res_wald_fav <- criterio.Wald(tabla1, favorable = TRUE)
+res_wald_fav
+```
+
+```{r}
+res_opt_fav <- criterio.Optimista(tabla1, favorable = TRUE)
+res_opt_fav
+```
+
+```{r}
+res_hurwicz_fav <- criterio.Hurwicz(tabla1, alfa = 0.3, favorable = TRUE)
+res_hurwicz_fav
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
